@@ -1,0 +1,18 @@
+#!/bin/sh
+
+key=$1
+value=$2
+
+for dir in $(find . -d 1); do 
+  if [ -d "$dir" ]; then 
+    echo ""
+    echo "============================"
+    echo "Configuring setting: $key to \"$value\""
+    cd $dir
+    git config --add $key "$value"
+    cd ../
+    echo ""
+    echo "----------------------------"
+    echo ""; 
+  fi; 
+done;

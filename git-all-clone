@@ -1,0 +1,36 @@
+#!/bin/sh
+
+gitClone=".gitclone"
+bldblk='\033[1;30m' # Black - Bold
+bldgrn='\033[1;32m' # Green - Bold
+bldylw='\033[1;36m' # Cyan - Bold
+bldylw='\033[1;33m' # Yellow - Bold
+txtrst='\033[0m'    # Text Reset
+
+for repo in $(< $gitClone); do
+  IFS=',' read -a cloneArray <<< "$repo"
+  if [ ! "${cloneArray[1]}" ]; then
+    IFS='/' read -a cloneArray <<< "$repo"
+    dir="${cloneArray[@]: -1:1}"
+    IFS='.' read -a dirArray <<< "$dir"
+    dir="${dirArray[0]}"
+  else
+    dir="${cloneArray[1]}"
+  fi;
+  if [ -d "$dir" ]; then
+    echo ""
+    echo "============================"
+    echo "Directory exists: $bldylw$dir$txtrst for repo: $bldgrn$repo$txtrst"
+    echo "----------------------------"
+    echo "";
+  else
+    echo ""
+    echo "============================"
+    echo "Cloning repo: $bldgrn$repo$txtrst"
+    echo ""
+    git clone "${cloneArray[0]}" "${dir}"
+    echo ""
+    echo "----------------------------"
+    echo "";
+  fi;
+done;
