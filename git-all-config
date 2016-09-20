@@ -3,8 +3,8 @@
 key=$1
 value=$2
 
-for dir in $(find . -d 1); do 
-  if [ -d "$dir" ]; then 
+for dir in $(ls -d ./*); do 
+  if [ -d "$dir" ]; then
     echo ""
     echo "============================"
     echo "Configuring setting: $key to \"$value\""
@@ -13,6 +13,6 @@ for dir in $(find . -d 1); do
     cd ../
     echo ""
     echo "----------------------------"
-    echo ""; 
-  fi; 
+    echo "";
+  fi;
 done;
