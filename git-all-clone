@@ -26,9 +26,9 @@ for repo in $(< $gitClone); do
   else
     echo ""
     echo "============================"
-    echo "Cloning repo: $bldgrn$repo$txtrst"
+    echo "Cloning repo: $bldgrn$repo$txtrst into $bldylw$dir$txtrst"
     echo ""
-    git clone "${cloneArray[0]}" "${dir}"
+    git clone "${repo}" "${dir}"
     echo ""
     echo "----------------------------"
     echo "";
