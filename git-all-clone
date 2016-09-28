@@ -31,7 +31,7 @@ for repo in $(< $gitClone); do
       echo "============================"
       echo "Cloning repo: $bldgrn$repo$txtrst into $bldylw$dir$txtrst"
       echo ""
-      #git clone "${repo}" "${dir}"
+      git clone "${repo}" "${dir}"
       echo ""
       echo "----------------------------"
       echo "";
