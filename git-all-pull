@@ -1,18 +1,34 @@
 #!/bin/sh
 
-key=$1
-value=$2
+key=${1};
+bldblk='\033[1;30m'; # Black - Bold
+red='\033[0;31m'; # Red - Bold
+bldred='\033[1;31m'; # Red - Bold
+bldgrn='\033[1;32m'; # Green - Bold
+bldylw='\033[1;33m'; # Yellow - Bold
+bldblu='\033[1;34m'; # Blue - Bold
+mgt='\033[0;35m'; # Magenta - Bold
+bldcyn='\033[1;36m'; # Cyan - Bold
+bldwht='\033[1;37m'; # White - Bold
+txtrst='\033[0m';    # Text Reset
 
-for dir in $(ls -d ./*); do 
-  if [ -d "$dir" ]; then
-    echo ""
-    echo "============================"
-    echo "Pulling code for $dir"
-    cd $dir
-    git pull
-    cd ../
-    echo ""
-    echo "----------------------------"
+if [ "${key}" == "-h" ]; then
+  echo "";
+  echo "\tUsage: ${mgt}git-all-pull${txtrst}";
+  echo "";
+  exit 0;
+fi;
+
+for dir in $(ls -d ./*); do
+  if [ -d "${dir}" ]; then
+    cd ${dir};
     echo "";
+    echo "============================";
+    echo "${bldgrn}Pulling code for${txtrst} ${bldcyn}${dir}${txtrst}";
+    git pull;
+    echo "";
+    echo "----------------------------";
+    echo "";
+    cd ../;
   fi;
 done;
