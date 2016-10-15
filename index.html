@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>git-all by doublenot</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>git-all</h1>
+        <p>Shell scripts for projects that have multiple git repositories</p>
+
+        <p class="view"><a href="https://github.com/doublenot/git-all">View the Project on GitHub <small>doublenot/git-all</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/doublenot/git-all/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/doublenot/git-all/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/doublenot/git-all">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install:</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ brew tap doublenot/git-all</pre></div>
+
+<div class="highlight highlight-source-shell"><pre>$ brew install git-all</pre></div>
+
+<h3>
+<a id="scripts-added" class="anchor" href="#scripts-added" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scripts added:</h3>
+
+<ul>
+<li>
+<code>git-all-clone</code> - clones all the repositories specified in the current working directory in the <code>.gitclone</code> file <em>(note: alternate repository or directory names can be provided by add <code>",new-repo-name"</code> to the end of the repository url)</em>
+</li>
+<li>
+<code>git-all-status</code> - provides the output of "git status" for every repository in the current working directory</li>
+<li>
+<code>git-all-config</code> - sets the config setting for every repository in the current working directory, use <code>-d</code> to remove all settings for a <code>key</code>
+</li>
+<li>
+<code>git-all-pull</code> - executes the "git pull" command for every repository in the current working directory</li>
+</ul>
+
+<h3>
+<a id="uninstall" class="anchor" href="#uninstall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uninstall:</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ brew uninstall git-all</pre></div>
+
+<div class="highlight highlight-source-shell"><pre>$ brew untap doublenot/git-all</pre></div>
+
+<h3>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO:</h3>
+
+<ul>
+<li>Add more examples and documentation</li>
+<li>Add scripts to help with multiple repository management (eg. git-all-npm script)</li>
+<li>Convert the shell scripts into node.js scripts</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/doublenot">doublenot</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

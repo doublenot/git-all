@@ -1,1 +1,7 @@
-{"name":"git-all","tagline":"Shell scripts for projects that have multiple git repositories","body":"...","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+  "name": "git-all",
+  "tagline": "Shell scripts for projects that have multiple git repositories",
+  "body": "\r\n### Install:\r\n\r\n```bash\r\n$ brew tap doublenot/git-all\r\n```\r\n\r\n```bash\r\n$ brew install git-all\r\n```\r\n\r\n### Scripts added:\r\n\r\n- `git-all-clone` - clones all the repositories specified in the current working directory in the `.gitclone` file _(note: alternate repository or directory names can be provided by add `\",new-repo-name\"` to the end of the repository url)_\r\n- `git-all-status` - provides the output of \"git status\" for every repository in the current working directory\r\n- `git-all-config` - sets the config setting for every repository in the current working directory, use `-d` to remove all settings for a `key`\r\n- `git-all-pull` - executes the \"git pull\" command for every repository in the current working directory\r\n\r\n### Uninstall:\r\n\r\n```bash\r\n$ brew uninstall git-all\r\n```\r\n\r\n```bash\r\n$ brew untap doublenot/git-all\r\n```\r\n\r\n### TODO:\r\n\r\n- Add more examples and documentation\r\n- Add scripts to help with multiple repository management (eg. git-all-npm script)\r\n- Convert the shell scripts into node.js scripts",
+  "google": "",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
